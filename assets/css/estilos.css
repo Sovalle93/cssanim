@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    grid-area: nav;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: rgb(39, 49, 52);
+    color: aliceblue;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.logo{
+    height: 5rem;
+    width: 5rem;
+    transform: rotate(0);
+    transition: transform 1s;
+}
+
+.logo:hover{
+    transform: rotate(360deg);
+}
+
+.menu{
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    gap: 1rem;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: header;
+    background-color: rgb(24, 31, 33);
+}
+
+.skull{
+    height: 5rem;
+    width: 5rem;
+    position: relative;
+    animation: move 2s ease infinite;
+    animation-name: move;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(-90px);
+    }
+    to {
+        transform: translateX(110px);
+    }
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: section;
+    background-color: rgb(61, 86, 90);
+}
+
+h1{
+    color: aliceblue;
+    text-align: center;
+}
+
+.waw{
+    border: solid 1px black;
+    padding: 1rem;
+    color: rgb(32, 32, 32);
+    background-color: rgb(27, 27, 27);
+    background-image: url("../img/waw.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    transition: background-blend-mode color 0.3s ease;
+}
+
+.waw:hover{
+    background-blend-mode: lighten;
+    color: aliceblue;
+}
+
+.kwyk{
+    border: solid 1px black;
+    padding: 1rem;
+    color: rgb(32, 32, 32);
+    background-color: rgb(27, 27, 27);
+    background-image: url("../img/kwyk.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    transition: background-blend-mode color 0.3s ease;
+}
+
+.kwyk:hover{
+    background-blend-mode: lighten;
+    color: aliceblue;
+}
+
+article{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    grid-area: article;
+    background-color: rgb(39, 68, 75);
+}
+
+.becca{
+    border: solid 1px black;
+    padding: 1rem;
+    color: rgb(32, 32, 32);
+    background-color: rgb(27, 27, 27);
+    background-image: url("../img/becca.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    transition: background-blend-mode color 0.3s ease;
+}
+
+.becca:hover{
+    background-blend-mode: lighten;
+    color: aliceblue;
+}
+
+.jack{
+    border: solid 1px black;
+    padding: 1rem;
+    color: rgb(32, 32, 32);
+    background-color: rgb(27, 27, 27);
+    background-image: url("../img/jack.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    transition: background-blend-mode color 0.3s ease;
+}
+
+.jack:hover{
+    background-blend-mode: lighten;
+    color: aliceblue;
+}
+
+.sam{
+    border: solid 1px black;
+    padding: 1rem;
+    color: rgb(32, 32, 32);
+    background-color: rgb(27, 27, 27);
+    background-image: url("../img/sam.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    transition: background-blend-mode color 0.3s ease;
+}
+
+.sam:hover{
+    background-blend-mode: lighten;
+    color: aliceblue;
+}
+
+.josh{
+    border: solid 1px black;
+    padding: 1rem;
+    color: rgb(32, 32, 32);
+    background-color: rgb(27, 27, 27);
+    background-image: url("../img/josh.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    transition: background-blend-mode color 0.3s ease;
+}
+
+.josh:hover{
+    background-blend-mode: lighten;
+    color: aliceblue;
+}
+
+.will{
+    border: solid 1px black;
+    padding: 1rem;
+    color: rgb(32, 32, 32);
+    background-color: rgb(27, 27, 27);
+    background-image: url("../img/will.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    transition: background-blend-mode color 0.3s ease;
+}
+
+.will:hover{
+    background-blend-mode: lighten;
+    color: aliceblue;
+}
+
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    background-color: #1c2529;
+    color: aliceblue;
+    text-align: center;
+    padding: 1rem;
+    height: 8rem;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fb{
+    height: 2rem;
+    width: 2rem;
+}
+
+.fb:hover{
+    cursor: pointer;
+}
+
+.ig{
+    height: 2rem;
+    width: 2rem;
+}
+
+.ig:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:576px) {
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        "nav nav"
+        "header header"
+        "section section"
+        "article article"
+        "footer footer";
+        grid-template-columns: 7rem 1fr;
+    }    
+
+    nav{
+        width: auto;
+        height: 5rem;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .marmologo{
+        height: 5rem;
+        width: 5rem;
+    }
+
+    header{
+        height: 8rem;
+    }
+
+    section{
+        height: 30rem;
+        width: auto;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    section h1{
+        display: block;
+        position: absolute;
+        padding-bottom: 22rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .waw{
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .kwyk{
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    h6{
+        padding-top: 4rem;
+    }
+
+    article{
+        height: 45rem;
+        width: auto;
+        display: grid;
+        grid-template-columns: auto auto;  
+        column-gap: 2rem;
+    }
+
+    article h1{
+        display: block;
+        position: absolute;
+        padding-bottom: 40rem;
+        padding-left: 5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .becca{
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .jack{
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .sam{
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .josh{
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .will{
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
+@media screen and (min-width:577px) {
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        "nav header"
+        "nav section"
+        "nav article"
+        "nav footer";
+        grid-template-columns: 14rem 1fr;
+    }    
+
+    nav{
+        width: auto;
+        height: 100rem;
+        justify-content: top;
+        flex-direction: column;
+    }
+
+    .logo{
+        justify-content: center;
+        padding-left: 4rem;
+    }
+
+    header{
+        height: 8rem;
+    }
+
+
+    section{
+        height: 42rem;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    section h1{
+        display: block;
+        position: absolute;
+        padding-bottom: 22rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .waw{
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .kwyk{
+        height: 8rem;
+        width: 8rem;
+    }
+
+    h6{
+        padding-top: 8rem;
+    }
+
+    article{
+        display: flex;
+        height: 42rem;
+        flex-direction: row;
+        gap: 1rem;
+        padding-left: 2rem;
+    }
+
+    
+    article h1{
+        display: block;
+        position: absolute;
+        padding-bottom: 22rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .becca{
+        position: relative;
+        height: 8rem;
+        width: 8rem;
+    }
+
+    
+    .jack{
+        position: relative;
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .sam{
+        position: relative;
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .josh{
+        position: relative;
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .will{
+        position: relative;
+        height: 8rem;
+        width: 8rem;
+    }
+
+}
